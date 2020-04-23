@@ -13,22 +13,33 @@ API.getWorkoutsInRange()
 
   function generatePalette() {
     const arr = [
-    "#003f5c",
-    "#2f4b7c",
-    "#665191",
-    "#a05195",
-    "#d45087",
-    "#f95d6a",
-    "#ff7c43",
-    "ffa600",
-    "#003f5c",
-    "#2f4b7c",
-    "#665191",
-    "#a05195",
-    "#d45087",
-    "#f95d6a",
-    "#ff7c43",
-    "ffa600"
+      "#218C8D",
+      "#6CCECB",
+      "#F9E559",
+      "#ff7c43",
+      "#f95d6a",
+      "#d45087",
+      "#8EDC9D",
+      "#665191",
+      "#2f4b7c",
+      "#473E3F",
+
+    // "#003f5c",
+    // "#2f4b7c",
+    // "#665191",
+    // "#a05195",
+    // "#d45087",
+    // "#f95d6a",
+    // "#ff7c43",
+    // "ffa600",
+    // "#003f5c",
+    // "#2f4b7c",
+    // "#665191",
+    // "#a05195",
+    // "#d45087",
+    // "#f95d6a",
+    // "#ff7c43",
+    // "ffa600"
   ]
 
   return arr;
@@ -59,8 +70,8 @@ function populateChart(data) {
       datasets: [
         {
           label: "Workout Duration In Minutes",
-          backgroundColor: "red",
-          borderColor: "red",
+          backgroundColor:  "mediumaquamarine",
+          borderColor: "mediumaquamarine",
           data: durations,
           fill: false
         }
@@ -170,10 +181,11 @@ function populateChart(data) {
     },
     options: {
       responsive: true,
+      hoverBorderWidth: 4,
       // maintainAspectRatio:false,
       title: {
         display: true,
-        text: "Excercises Performed"
+        text: "Duration of Excercises Performed"
       }
     }
   });
@@ -192,10 +204,11 @@ function populateChart(data) {
     },
     options: {
       responsive: true,
+      hoverBorderWidth: 4,
       // maintainAspectRatio:false,
       title: {
         display: true,
-        text: "Excercises Performed"
+        text: "Pounds Lifted in Performed Excercises"
       }
     }
   });

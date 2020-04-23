@@ -10,6 +10,8 @@ html,
 body,
 .container {
   height: 100%;
+  background-color: whitesmoke;
+
 }
 
 h1,h2,h3,h4,h5,a,button,canvas,
@@ -18,8 +20,13 @@ body {
   /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
 }
 
+.ui.column.grid>[class*="eight wide"].column, .ui.grid>.column.row>[class*="eight wide"].column, .ui.grid>.row>[class*="eight wide"].column, .ui.grid>[class*="eight wide"].column {
+  width: 48%!important;
+  margin: 5px;
+}
+
 nav {
-  /* background-color: #d5e4ff; */
+  background-color: white;
 
   /* background-color: #2185d0; */
   /* background-color: #5793fd; */
@@ -146,6 +153,7 @@ p{
 .container {
   background-color: whitesmoke;
   padding-bottom: 100px;
+  height: vh
 }
 
 /* .ui.card{
@@ -489,6 +497,10 @@ form > button {
 }
 
 @media only screen and (max-width: 767px){
+  /* .ui.column.grid>[class*="eight wide"].column, .ui.grid>.column.row>[class*="eight wide"].column, .ui.grid>.row>[class*="eight wide"].column, .ui.grid>[class*="eight wide"].column {
+    width: 100%!important;
+    margin-bottom: 10px!important;
+  } */
 .ui.grid>.stackable.stackable.row>.column, .ui.stackable.grid>.column.grid>.column, .ui.stackable.grid>.column.row>.column, .ui.stackable.grid>.column:not(.row), .ui.stackable.grid>.row>.column, .ui.stackable.grid>.row>.wide.column, .ui.stackable.grid>.wide.column {
     margin: 5px 0px!important;
    

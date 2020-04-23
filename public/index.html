@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Fitness Tracker</title>
+</head>
+
+<body>
+  <nav>
+    <div class = "ui secondary menu teal">
+      <a class= "active browse item" href="/">Fitness Tracker<i class="home icon"></i></a>
+      <a class= "browse item" href="/stats">Dashboard<i class = "chart line icon"></i></a>
+    </div>
+  </nav>
+  <div class="container workout">
+    <header>
+      <h1>Fitness Tracker</h1>
+    </header>
+    <div class="ui container workout">
+      <div class="ui raised card m-auto">
+        <div class="prev-workout">
+          <h3>Last Workout</h3>
+          <div>
+            <div class="workout-stats"></div>
+            <div class="extra content">
+              <div class="ui buttons">
+                <a id=" continue-btn" href="/exercise?" class="huge teal ui button">Continue Workout</a>
+                <div class="or"></div>
+                <a href="/exercise" class="huge olive ui button">New Workout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="new-workout">
+          <h3>Create Your First Workout</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div id="toast">
+    Workout Added Successfully!
+  </div>
+  <script src="/api.js"></script>
+  <script src="/workout.js"></script>
+  <script src="/index.js"></script>
+</body>
+
+</html>

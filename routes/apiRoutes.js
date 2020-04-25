@@ -1,7 +1,5 @@
 const router = require("express").Router();
-// const db = require("../models");
 const Workout = require("../models/workout");
-// const mongoose = require("mongoose");
 
 //-----routing-----
 
@@ -51,7 +49,8 @@ const Workout = require("../models/workout");
     
     //getWorkoutsInRange()
     router.get("/api/workouts/range", (req, res) => {
-        Workout.find({}).sort({"day": -1}).limit(5)
+        Workout.find({}).sort({"day": +1})
+        // .limit(7)
         .then(dbWorkoutData => {
             res.json(dbWorkoutData)
         }).catch(err => {

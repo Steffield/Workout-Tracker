@@ -8,6 +8,8 @@
 
 *[Description](#Description)
 
+*[Technologies Used](#Technologies-Used)
+
 *[Installation](#Installation)
 
 *[Usage](#Usage)
@@ -26,7 +28,11 @@ A consumer will reach their fitness goals quicker when they track their workout 
 
 ## Description
 
-This is a workout tracker which is using a Mongo database with a Mongoose schema and handles routes with Express.js.
+This is a workout tracker that lets you add or continue cardio or resistance workouts. The Dashboard page gives you charts to visually track your exercises.
+
+## Technologies Used
+
+The used technologies include a Mongo database with a Mongoose Schema. Routes are handled with Express.js. The charts are made with chart.js and the CSS framework is Semantic-Ui.
 
 ## Installation
 
@@ -46,9 +52,9 @@ The user can:
 
 ## Deployed Link:
 
-The heroku deployed link: <a href="#">Workout Tracker</a>.
+The heroku deployed link: <a href="https://steffield-workout-tracker.herokuapp.com/">Workout Tracker</a>.
 
-![](#)
+![](./public/assets/WorkoutTrack.gif)
 
 ## Questions
 

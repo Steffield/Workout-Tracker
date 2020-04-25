@@ -1,12 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const logger = require("morgan"); //http request logger middleware
+const compression = require("compression"); 
 
 const PORT = process.env.PORT || 1234;
 
 const app = express();
 
+//middleware
 app.use(logger("dev"));
+//compress all responses
+app.use(compression());
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

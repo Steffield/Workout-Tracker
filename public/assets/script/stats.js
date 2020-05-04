@@ -1,4 +1,3 @@
-// get all workout data from back-end
 
 fetch("/api/workouts/range")
   .then((response) => {
@@ -204,7 +203,7 @@ function duration(data) {
   data.forEach((workout) => {
     const duration = workout.exercises
       .map((exercise) => exercise.duration)
-      .reduce((acc, cv) => acc + cv);
+      // .reduce((acc, cv) => acc + cv);
 
     const parseDate = new Date(workout.day);
     // getMonth method returns a zero based index which is why 1 was added
@@ -233,7 +232,7 @@ function calculateTotalWeight(data) {
   data.forEach((workout) => {
     const weight = workout.exercises
       .map((exercise) => exercise.weight)
-      .reduce((acc, cv) => acc + cv);
+      // .reduce((acc, cv) => acc + cv);
 
     const parseDate = new Date(workout.day);
     // getMonth method returns a zero based index which is why 1 was added

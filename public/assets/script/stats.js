@@ -48,6 +48,7 @@ function populateChart(data) {
   let durations = duration(data);
   let pounds = calculateTotalWeight(data);
   let workouts = workoutNames(data);
+  let weightWorkouts = weightWorkoutOnly(data);
   const colors = generatePalette();
 
   let line = document.querySelector("#canvas").getContext("2d");
@@ -177,7 +178,7 @@ function populateChart(data) {
   let donutChart = new Chart(pie2, {
     type: "doughnut",
     data: {
-      labels: workouts,
+      labels: weightWorkouts,
       datasets: [
         {
           label: "Weight Lifted in Performed Exercises",
@@ -232,8 +233,6 @@ function calculateTotalWeight(data) {
   data.forEach((workout) => {
     const weight = workout.exercises
       .map((exercise) => exercise.weight)
-      // .reduce((acc, cv) => acc + cv);
-
     const parseDate = new Date(workout.day);
     // getMonth method returns a zero based index which is why 1 was added
     const month = parseDate.getMonth() + 1;
@@ -259,8 +258,23 @@ function workoutNames(data) {
       workouts.push(exercise.name);
     });
   });
-
+console.log(workouts)
   return workouts;
+}
+
+function weightWorkoutOnly(data){
+  let weightWorkouts =[];
+
+  data.forEach((weightWorkout) => {
+    weightWorkout.exercises.forEach((exercise) => {
+      if (exercise.type === "resistance"){
+        console.log(exercise.name)
+        weightWorkouts.push(exercise.name)
+      }
+    })
+  })
+  console.log(weightWorkouts)
+  return weightWorkouts
 }
 
 

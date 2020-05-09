@@ -2,19 +2,19 @@
 
 ## Table of Content
 
-*[User Story](#User)
+* [User Story](#User)
 
-*[Business Context](#Business-Context)
+* [Business Context](#Business-Context)
 
-*[Description](#Description)
+* [Description](#Description)
 
-*[Technologies Used](#Technologies-Used)
+* [Technologies Used](#Technologies-Used)
 
-*[Installation](#Installation)
+* [Installation](#Installation)
 
-*[Usage](#Usage)
+* [Usage](#Usage)
 
-*[Deployed Link](#Deployed)
+* [Deployed Link](#Deployed)
 
 ## User Story
 
